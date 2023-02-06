@@ -1,0 +1,75 @@
+<div class="popup-content__container">
+  <div class="popup-content__header">
+    <div class="popup-content__header-content">
+        <kendo-icon name="chevron-left" size="xlarge" (click)="close.emit(null)"></kendo-icon>
+        <h3 class="popup-content__header-title">Add Weight</h3>
+    </div>
+    <button  kendoButton imageUrl="https://img.icons8.com/ios/50/null/satisfaction.png" fillMode="clear" class="popup__menu-btn" ></button>
+  </div>
+
+  <div class="popup-content_weight">
+    52.2
+  </div>
+
+  <kendo-arcgauge
+      [value]="value"
+      [transitions]="false"
+      style="display:block;height:250px;width: 300px"
+    >
+      <kendo-arcgauge-scale
+        [majorTicks]="{ visible: showTicks, color: ticksColor }"
+        [minorTicks]="{ visible: showTicks, color: ticksColor }"
+        [reverse]="reverse"
+        [startAngle]="startAngle"
+        [endAngle]="endAngle"
+        [rangePlaceholderColor]="rangePlaceholderColor"
+        [rangeSize]="rangeSize"
+        [rangeLineCap]="rangeLineCap"
+      >
+        <kendo-arcgauge-scale-labels
+          format="c"
+          [color]="labelsColor"
+          [visible]="showLabels"
+        >
+        </kendo-arcgauge-scale-labels>
+      </kendo-arcgauge-scale>
+    </kendo-arcgauge>
+
+
+    <div class="popup-content_buttons">
+      <kendo-card width="100%">
+        <kendo-card-body>
+          <div class="tile-body">
+            Male
+          </div>
+        </kendo-card-body>
+      </kendo-card>
+
+      <kendo-card width="100%">
+        <kendo-card-body>
+          <div class="tile-body">
+            Female
+          </div>
+        </kendo-card-body>
+      </kendo-card>
+  </div>
+
+  <div class="popup-content_buttons">
+    <kendo-card width="100%">
+      <kendo-card-body>
+        <div class="tile-body">
+          Age
+        </div>
+      </kendo-card-body>
+    </kendo-card>
+
+    <kendo-card width="100%">
+      <kendo-card-body>
+        <div class="tile-body">
+          Height
+        </div>
+      </kendo-card-body>
+    </kendo-card>
+  </div>
+  <button class="w-100 mt-5" kendoButton themeColor="primary" fillMode="solid" (click)="close.emit(null)">Save</button>
+</div>

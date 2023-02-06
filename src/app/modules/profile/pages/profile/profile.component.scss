@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  height: 100%;
+}
+.profile {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &-title {
+      margin-left: 8px;
+    }
+  }
+}

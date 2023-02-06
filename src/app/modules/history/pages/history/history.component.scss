@@ -1,0 +1,124 @@
+@import "../../../../styles/animations";
+@import "../../../../styles/variables";
+
+:host {
+  display: block;
+  height: 100%;
+  padding: 16px;
+}
+
+.reset {
+  animation: rotate .8s forwards;
+}
+
+.history {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+    &-title {
+      margin-left: 8px;
+    }
+  }
+}
+
+.sliding_panel {
+  display: block;
+  overflow: hidden;
+  height: 130px;
+  animation: slideIn .8s forwards;
+
+  &__wrapper {
+    display: grid;
+    overflow: auto;
+    width: 100%;
+    grid-template-columns: calc(50% - 4px) calc(50% - 4px) calc(50% - 4px);
+    grid-gap: 8px;
+    height: 140px;
+  }
+}
+
+.sliding_panel {
+  display: block;
+  overflow: hidden;
+  height: 205px;
+  animation: slideIn .8s forwards;
+
+  &__wrapper {
+    display: grid;
+    overflow: auto;
+    width: 100%;
+    grid-template-columns: 100% 100%;
+    grid-gap: 8px;
+    height: 230px;
+  }
+}
+
+.history-section {
+  animation: slideIn .8s forwards;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card {
+    animation: slideIn .8s forwards;
+
+    .kendo-card-body {
+      padding-top: 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.trending-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__card {
+     animation: slideIn .8s forwards;
+  }
+
+  img {
+    width: 24px;
+    margin-right: 8px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.legends {
+  display: flex;
+  padding: 0 30px 16px;
+  .legend-item{
+    position: relative;
+    margin-right: 32px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: $primary;
+      border-radius: 100%;
+      top: 8px;
+      left: -16px;
+    }
+    &:nth-child(1)::before {
+      background: #c6f26a;
+    }
+    &:nth-child(2)::before {
+      background:#f0edfd;
+    }
+  }
+}

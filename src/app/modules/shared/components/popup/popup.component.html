@@ -1,0 +1,31 @@
+<div  class="popup-card" [class.popup-card--hidden]="showContent">
+    <div class="popup-container">
+      <div  class="popup__menu" [class.popup__menu--hidden]="showContent">
+        <button kendoButton imageUrl="https://img.icons8.com/ios/50/null/hypertension.png" fillMode="clear" class="popup__menu-btn" [class.popup__menu-btn--hidden]="showContent" (click)="toggleContent()">
+          <strong>Add Blood Pressure</strong>
+        </button>
+      </div>
+      <div class="popup__menu"  [class.popup__menu--hidden]="showContent" >
+        <button  kendoButton imageUrl="https://img.icons8.com/ios/50/null/satisfaction.png" fillMode="clear"  class="popup__menu-btn" [class.popup__menu-btn--hidden]="showContent"  (click)="toggleContent()" >
+          <strong> Add Weight Measurement</strong>
+        </button>
+      </div>
+      <div class="popup__menu" [class.popup__menu--hidden]="showContent">
+        <button  kendoButton imageUrl="https://img.icons8.com/ios/50/null/floating-guru.png" fillMode="clear"  class="popup__menu-btn"  [class.popup__menu-btn--hidden]="showContent" (click)="toggleContent()">
+          <strong> Add Activity</strong>
+        </button>
+      </div>
+      <div class="popup__menu" [class.popup__menu--hidden]="showContent">
+        <button  kendoButton imageUrl="https://img.icons8.com/ios/50/null/exercise.png" fillMode="clear"  class="popup__menu-btn"[class.popup__menu-btn--hidden]="showContent"  (click)="toggleContent()">
+          <strong> Track My Workout</strong>
+        </button>
+      </div>
+    </div>
+  </div>
+<div class="triangle-container" *ngIf="!showContent">
+  <div class="triangle-box"></div>
+</div>
+
+<div class="popup-menu__content" [class.popup-menu__content--show]="showContent" >
+  <app-popup-content (close)="onClose()"></app-popup-content>
+</div>

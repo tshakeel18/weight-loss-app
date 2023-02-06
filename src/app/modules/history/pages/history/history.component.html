@@ -1,0 +1,120 @@
+<div class="history__header">
+  <h2 class="history__header-title">History</h2>
+  <kendo-icon class="reset" name="reset"></kendo-icon>
+</div>
+<div classs="history__sections">
+  <h2>Monday, 11th January</h2>
+
+  <div class="history-section">
+    <kendo-card width="100%" [style.height.px]="200" class="history-section__card">
+      <kendo-card-header>
+        <div>Weight</div>
+      </kendo-card-header>
+      <kendo-card-body>
+        <div class="history-section__container">
+          <h2>52.3</h2>
+          <kendo-chart [style.width.%]="80" [style.height.px]="100">
+            <kendo-chart-category-axis>
+              <kendo-chart-category-axis-item
+              [majorGridLines]="{visible: false}"
+                [categories]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']"
+              >
+              </kendo-chart-category-axis-item>
+            </kendo-chart-category-axis>
+            <kendo-chart-value-axis>
+              <kendo-chart-value-axis-item [labels]="{ visible: false }" [majorGridLines]="{visible: false}">
+              </kendo-chart-value-axis-item>
+            </kendo-chart-value-axis>
+            <kendo-chart-series >
+              <kendo-chart-series-item
+                type="line"
+                [data]="[123, 276, 310, 212, 240, 156, 98]"
+              >
+              </kendo-chart-series-item>
+              <kendo-chart-series-item
+                type="line"
+
+                [data]="[165, 210, 287, 144, 190, 167, 212]"
+              >
+              </kendo-chart-series-item>
+            </kendo-chart-series>
+          </kendo-chart>
+        </div>
+      </kendo-card-body>
+    </kendo-card>
+  </div>
+
+  <kendo-card width="100%" class="history-section__card mt-4">
+    <kendo-card-header>
+      <div>BMI</div>
+    </kendo-card-header>
+
+    <kendo-card-body>
+      <kendo-progressbar [value]="20" [min]="0" [max]="100" [label]="false">
+        <ng-template kendoProgressBarProgressElement let-value="value">
+          <div [style.background-color]="getColor(value)"></div>
+        </ng-template>
+      </kendo-progressbar>
+    </kendo-card-body>
+
+    <div class="legends">
+      <div class="legend-item">Low</div>
+      <div class="legend-item">Medium</div>
+      <div class="legend-item">High</div>
+    </div>
+  </kendo-card>
+
+  <div class="history-section mt-4">
+    <div class="sliding_panel">
+      <div class="sliding_panel__wrapper">
+        <kendo-card width="100%" [style.height.px]="200" class="history-section__card">
+          <kendo-card-header>
+            <div>Sleeping</div>
+          </kendo-card-header>
+          <kendo-card-body>
+            <div class="history-section__container">
+              <h2>52.3</h2>
+              <kendo-chart [style.height.px]="130">
+                <kendo-chart-category-axis>
+                  <kendo-chart-category-axis-item [labels]="{color: '#fff'}" [majorGridLines]="{visible: false}" [categories]="categories">
+                  </kendo-chart-category-axis-item>
+                </kendo-chart-category-axis>
+                <kendo-chart-value-axis>
+                  <kendo-chart-value-axis-item [labels]="{ color: '#fff' }">
+                  </kendo-chart-value-axis-item>
+                </kendo-chart-value-axis>
+                <kendo-chart-series >
+                  <kendo-chart-series-item [data]="seriesData" > </kendo-chart-series-item>
+                </kendo-chart-series>
+              </kendo-chart>
+            </div>
+          </kendo-card-body>
+        </kendo-card>
+
+        <kendo-card width="100%" [style.height.px]="200" class="history-section__card">
+          <kendo-card-header>
+            <div>Measurement</div>
+          </kendo-card-header>
+          <kendo-card-body>
+            <div class="history-section__container">
+              <h2>52.3</h2>
+              <kendo-chart [style.height.px]="130" >
+                <kendo-chart-category-axis>
+                  <kendo-chart-category-axis-item [labels]="{color: '#fff'}" [majorGridLines]="{visible: false}" [categories]="categories">
+                  </kendo-chart-category-axis-item>
+                </kendo-chart-category-axis>
+                <kendo-chart-value-axis>
+                  <kendo-chart-value-axis-item [labels]="{ color: '#fff' }">
+                  </kendo-chart-value-axis-item>
+                </kendo-chart-value-axis>
+                <kendo-chart-series >
+                  <kendo-chart-series-item [data]="seriesData" > </kendo-chart-series-item>
+                </kendo-chart-series>
+              </kendo-chart>
+            </div>
+          </kendo-card-body>
+        </kendo-card>
+      </div>
+    </div>
+  </div>
+</div>

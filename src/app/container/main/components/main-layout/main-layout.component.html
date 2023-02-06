@@ -1,0 +1,10 @@
+<kendo-bottomnavigation
+  [items]="items"
+  positionMode="sticky"
+  [border]="true">
+  <ng-template kendoBottomNavigationItemTemplate let-item>
+    <div [routerLink]="item.path" class="k-bottom-nav-link">
+      <kendo-icon [name]="item.icon" size="medium"></kendo-icon>
+    </div>
+  </ng-template>
+</kendo-bottomnavigation>

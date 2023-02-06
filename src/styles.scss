@@ -1,0 +1,40 @@
+@import "app/styles/variables";
+@import "~@progress/kendo-theme-bootstrap/dist/all.scss";
+@import "app/styles/index";
+
+html,
+body {
+  background-color: #fff;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  color: #2e2e2e;
+}
+
+.k-button {
+  box-shadow: $button-shadow;
+  // border-radius: 8px;
+}
+
+.k-card {
+  box-shadow: 0 1px 1px 1px rgb(0 0 0 / 2%), 0 2px 2px 0 rgb(0 0 0 / 4%), 0 1px 1px 0 rgb(0 0 0 / 2%);
+  border-radius: 16px;
+
+  .k-card-header {
+    background: transparent;
+    border: none;
+  }
+}
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}

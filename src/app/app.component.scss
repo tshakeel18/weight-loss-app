@@ -1,0 +1,22 @@
+@import '../app//styles//animations';
+:host {
+  display: block;
+  height: 100%;
+  position: relative;
+}
+
+.main-container {
+  display: block;
+  height: calc(100% - 73px);
+}
+
+.menu-button {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  animation: rotate .3s forwards;
+}

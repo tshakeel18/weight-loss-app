@@ -1,0 +1,94 @@
+
+@keyframes fadeout {
+  0% {
+    opacity:  0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+   opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity:  1;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+
+  100% {
+   opacity: 0;
+  }
+}
+
+@keyframes fadeoutAndExpandMin {
+  0% {
+    opacity:  0;
+    width: 0;
+    background-color: #dee2e6;
+  }
+
+  100% {
+   opacity: 1;
+   width: calc(100% - 24px);
+   background-color: white;
+  }
+
+}
+@keyframes fadeoutAndExpand {
+  0% {
+    opacity:  0;
+    width: 0;
+    background-color: #dee2e6;
+  }
+
+  100% {
+   opacity: 1;
+   width: 100%;
+   background-color: white;
+  }
+
+}
+
+@keyframes fadeinAndCollapse {
+  0% {
+    opacity:  1;
+    width: 100%;
+  }
+
+  100% {
+   opacity: 0;
+   width: 0;
+  }
+}
+
+
+@keyframes slideIn {
+  0% {
+    opacity:  0;
+    transform: translateX(100%);
+  }
+
+  100% {
+   opacity: 1;
+   transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform:  rotate(45deg);
+  }
+
+
+  100% {
+    transform:  rotate(0deg);
+  }
+}

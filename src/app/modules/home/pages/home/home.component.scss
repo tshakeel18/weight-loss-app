@@ -1,0 +1,70 @@
+
+@import "../../../../styles/animations";
+
+:host {
+  display: block;
+  height: 100%;
+  padding: 16px;
+}
+
+.home {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    &-title {
+      margin-left: 8px;
+    }
+  }
+}
+
+.sliding_panel {
+  display: block;
+  overflow: hidden;
+  height: 130px;
+  animation: slideIn .8s forwards;
+
+  &__wrapper {
+    display: grid;
+    overflow: auto;
+    width: 100%;
+    grid-template-columns: calc(50% - 4px) calc(50% - 4px) calc(50% - 4px);
+    grid-gap: 8px;
+    height: 140px;
+  }
+}
+
+.chart-section{
+  animation: slideIn .8s forwards;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__card {
+
+    animation: slideIn .8s forwards;
+    background-color: #7762fd ;
+  }
+}
+
+.trending-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__card {
+     animation: slideIn .8s forwards;
+  }
+  img {
+    width: 24px;
+    margin-right: 8px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+  }
+}

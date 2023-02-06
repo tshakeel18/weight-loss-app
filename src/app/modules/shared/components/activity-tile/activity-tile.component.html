@@ -1,0 +1,19 @@
+<kendo-card width="100%">
+  <kendo-card-body>
+    <div class="tile-body">
+      <div class="tile__icon-area">
+        <img [src]="image"/>
+      </div>
+      <div class="tile__content-area">
+        <h3 class="mb-0">{{value}}</h3>
+        <div class="tile__content-area_description">{{description}}</div>
+        <kendo-progressbar [value]="20" [min]="0" [max]="100" [label]="false">
+          <ng-template kendoProgressBarProgressElement let-value="value">
+            <div [style.background-color]="getColor()"></div>
+          </ng-template>
+        </kendo-progressbar>
+      </div>
+    </div>
+
+  </kendo-card-body>
+</kendo-card>

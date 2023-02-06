@@ -1,0 +1,59 @@
+<div class="home__header">
+  <h2 class="home__header-title">My Activity</h2>
+  <kendo-avatar icon="user">
+  </kendo-avatar>
+</div>
+<div classs="home__sections">
+  <div class="sliding_panel">
+    <div class="sliding_panel__wrapper">
+      <app-activity-tile [value]="27" description="Left today" image="https://img.icons8.com/windows/32/null/hotjar.png"></app-activity-tile>
+      <app-activity-tile [value]="876" description="Calories burn" image="https://img.icons8.com/fluency-systems-regular/48/null/human-footprints.png"></app-activity-tile>
+      <app-activity-tile [value]="7597" description="Steps" image="https://img.icons8.com/material-outlined/24/null/last-12-hours.png"></app-activity-tile>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-section__header">
+      <h4 class="home__header-title">Goal for Week</h4>
+      <span>41 of 45</span>
+    </div>
+
+    <kendo-card width="100%" [style.height.px]="250" class="chart-section__card">
+      <kendo-card-body>
+        <kendo-chart [style.height.px]="200" [chartArea]="{background: '#7762fd'}">
+          <kendo-chart-category-axis>
+            <kendo-chart-category-axis-item [labels]="{color: '#fff'}" [majorGridLines]="{visible: false}" [categories]="categories">
+            </kendo-chart-category-axis-item>
+          </kendo-chart-category-axis>
+          <kendo-chart-value-axis>
+            <kendo-chart-value-axis-item [labels]="{ color: '#fff' }">
+            </kendo-chart-value-axis-item>
+          </kendo-chart-value-axis>
+          <kendo-chart-series >
+            <kendo-chart-series-item [data]="seriesData" > </kendo-chart-series-item>
+          </kendo-chart-series>
+        </kendo-chart>
+      </kendo-card-body>
+  </kendo-card>
+  </div>
+
+
+  <div class="chart-section">
+    <div class="chart-section__header">
+      <h4 class="home__header-title">Trending Workouts</h4>
+      <span>See All</span>
+    </div>
+
+    <kendo-card width="100%" class="trending-section__card">
+      <kendo-card-body>
+        <div class="trending-section">
+          <div class="trending-section__title">
+            <img src="https://img.icons8.com/external-icongeek26-outline-icongeek26/64/null/external-cycle-healthy-lifestyle-icongeek26-outline-icongeek26.png"/>
+            <div>Muscle Builder</div>
+          </div>
+          <kendo-icon name="video-external" size="xlarge" themeColor="dark"></kendo-icon>
+        </div>
+      </kendo-card-body>
+  </kendo-card>
+  </div>
+</div>
